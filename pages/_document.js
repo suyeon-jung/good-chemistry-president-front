@@ -10,6 +10,10 @@ export default class RootDocument extends Document {
       <Html>
         <Head>
           <link
+            href="https://fonts.googleapis.com/css2?family=Song+Myung&display=optional"
+            rel="stylesheet"
+          />
+          <link
             rel="apple-touch-icon"
             sizes="57x57"
             href="/apple-icon-57x57.png"
