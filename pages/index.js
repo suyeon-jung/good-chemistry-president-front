@@ -1,9 +1,11 @@
 import Icon from '../components/Icon';
+import useClipBoard from '../hooks/useClipBoard';
 import useShare from '../hooks/useShare';
 import { SHARE_TYPE } from '../utils/constants';
 
 export default function Home() {
   const { onClick } = useShare();
+  const { onCopy } = useClipBoard();
   return (
     <div>
       <h1>프로젝트제목</h1>
@@ -18,6 +20,9 @@ export default function Home() {
       </div>
       <div>
         <Icon onClick={() => onClick(SHARE_TYPE.TWITTER)}>트위터</Icon>
+      </div>
+      <div>
+        <button onClick={() => onCopy(location.href)}>URL복사</button>
       </div>
     </div>
   );
