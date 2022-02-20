@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Icon({ onClick }) {
-  return <button onClick={onClick}>Icon</button>;
+function Icon({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
 }
 
 export default Icon;
