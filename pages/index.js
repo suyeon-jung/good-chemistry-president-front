@@ -1,29 +1,14 @@
-import Icon from '../components/Icon';
-import useClipBoard from '../hooks/useClipBoard';
-import useShare from '../hooks/useShare';
-import { SHARE_TYPE } from '../utils/constants';
+import Button from '../components/Button';
+import Link from 'next/link';
 
 export default function Home() {
-  const { onClick } = useShare();
-  const { onCopy } = useClipBoard();
   return (
     <div>
-      <h1>프로젝트제목</h1>
-      <h2>프로젝트제목</h2>
-      <h3>프로젝트제목</h3>
-      <h4>프로젝트제목</h4>
-      <div>
-        <Icon onClick={() => onClick(SHARE_TYPE.KAKAO)}>카카오톡</Icon>
-      </div>
-      <div>
-        <Icon onClick={() => onClick(SHARE_TYPE.FACEBOOK)}>페이스북</Icon>
-      </div>
-      <div>
-        <Icon onClick={() => onClick(SHARE_TYPE.TWITTER)}>트위터</Icon>
-      </div>
-      <div>
-        <button onClick={() => onCopy(location.href)}>URL복사</button>
-      </div>
+      <Button>
+        <Link href='/test'>
+          <a>시작하기</a>
+        </Link>
+      </Button>
     </div>
   );
 }
