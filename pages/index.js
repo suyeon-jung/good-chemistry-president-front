@@ -10,8 +10,15 @@ export default function Home() {
       <h2>프로젝트제목</h2>
       <h3>프로젝트제목</h3>
       <h4>프로젝트제목</h4>
-      <Icon onClick={() => onClick(SHARE_TYPE.KAKAO)}>카카오톡</Icon>
-      <Icon onClick={() => onClick(SHARE_TYPE.TWITTER)}>트위터</Icon>
+      <div>
+        <Icon onClick={() => onClick(SHARE_TYPE.KAKAO)}>카카오톡</Icon>
+      </div>
+      <div>
+        <Icon onClick={() => onClick(SHARE_TYPE.FACEBOOK)}>페이스북</Icon>
+      </div>
+      <div>
+        <Icon onClick={() => onClick(SHARE_TYPE.TWITTER)}>트위터</Icon>
+      </div>
     </div>
   );
 }
